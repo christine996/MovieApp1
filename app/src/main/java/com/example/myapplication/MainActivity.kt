@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("titles","titles:${movie.title}")
             stringBuilder1.append(movie.title)
             stringBuilder2.append(movie.releaseDate)
-stringBuilde
+
             stringBuilder1.append("\n")
 
 

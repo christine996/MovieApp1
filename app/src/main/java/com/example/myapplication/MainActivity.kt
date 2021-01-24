@@ -6,6 +6,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Response
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var popularMovies: RecyclerView
@@ -14,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+       // titles(Result());
         popularMovies = findViewById(R.id.popular_movies)
         popularMovies.layoutManager = LinearLayoutManager(
             this,
@@ -30,11 +34,33 @@ class MainActivity : AppCompatActivity() {
             onError = ::onError)
     }
 
+
+    val stringBuilder1= StringBuilder()
+    val stringBuilder2= StringBuilder()
+    val stringBuilder3= StringBuilder()
+
+
     private fun onPopularMoviesFetched(movies: List<Result>) {
-        Log.d("MainActivity", "Movies: $movies")
+//       var x="/e6SK2CAbO3ENy52UTzP3lv32peC.jpg"
+//        Log.d("!!!","https://image.tmdb.org/t/p/w342${x}")
+        Log.d("MainActivity", "Movies: ${movies}")
+
+        for(movie in movies){
+            Log.d("titles","titles:${movie.title}")
+            stringBuilder1.append(movie.title)
+            stringBuilder2.append(movie.releaseDate)
+stringBuilde
+            stringBuilder1.append("\n")
+
+
+        }
+        txtId.text = "title"+stringBuilder1;
+
     }
 
     private fun onError() {
         Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
     }
+
+
 }

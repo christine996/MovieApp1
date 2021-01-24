@@ -36,10 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 
     val stringBuilder1= StringBuilder()
-    val stringBuilder2= StringBuilder()
-    val stringBuilder3= StringBuilder()
-
-
+    
     private fun onPopularMoviesFetched(movies: List<Result>) {
 //       var x="/e6SK2CAbO3ENy52UTzP3lv32peC.jpg"
 //        Log.d("!!!","https://image.tmdb.org/t/p/w342${x}")
@@ -47,14 +44,11 @@ class MainActivity : AppCompatActivity() {
 
         for(movie in movies){
             Log.d("titles","titles:${movie.title}")
-            stringBuilder1.append(movie.title)
-            stringBuilder2.append(movie.releaseDate)
-
-            stringBuilder1.append("\n")
-
+            stringBuilder1.append(movie.title+"\n"+movie.releaseDate)
+            stringBuilder1.append("\n \n")
 
         }
-        txtId.text = "title"+stringBuilder1;
+        txtId.text = stringBuilder1;
 
     }
 

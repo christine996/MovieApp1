@@ -1,7 +1,7 @@
 ##MovieApp
 
 ##OverView
-This project aims to show list of popular movies.
+This project aims to show a list of popular movies.
 
 ##Content:
 -Two activities
@@ -10,14 +10,14 @@ This project aims to show list of popular movies.
 -Two adapters
 -An object
 
---> Interface Api:
+--> Interface API:
 -Has params of URL(api_key & page) and defining type of API(GET).
 
 --> Movies data class:
--Contains array of objects that contais movies data(Result).
+-Contains an array of objects that contains movie data(Result).
 
 --> Result data class:
--Contains all data about movies: title,overview,releaseDate....etc.
+-Contains all data about movies: title, overview,releaseDate....etc.
 
 --> Adapter MoviesAdapter: (not working)
 -Used to load images using glide library
@@ -25,8 +25,9 @@ This project aims to show list of popular movies.
  -->Adapter Adapter: (not working)
 -It extends from the BaseAdapter.
 -It uses LayoutInflater to convert the XML to view objects
--It has overriden methods to get size and position to be used in the main activity to show title,releaseDate and description 
-when navigated to another activity.(commented code)
+-It has overridden methods to get size and position to be used in the main activity to show title,releaseDate, 
+and description when navigated to another activity. (commented code)
 
 -->Object MoviesRepository:
--Calls api using retrofit and GsonConverterFactory to parse API JSON response.
+-Calls API using retrofit and GsonConverterFactory to parse API JSON response.
+

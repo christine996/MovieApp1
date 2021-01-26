@@ -11,9 +11,9 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val movieTitle=intent.getStringExtra("movieTitle");
+        val description=intent.getStringExtra("Description");
 
-        txtTitle.text = movieTitle;
-        Log.d("movie","title"+movieTitle)
+        txtTitle.text = description;
+
     }
 }

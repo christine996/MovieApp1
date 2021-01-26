@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         text.text = stringBuilder;
         text.setOnClickListener {
             val intent = Intent(this@MainActivity, SecondActivity::class.java)
-            intent.putExtra("movieTitle","")
+            intent.putExtra("Description","Description")
             startActivity(intent)
         }
     }
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 //        listView1.setOnItemClickListener { parent, view, position, id ->
 //
 //            val intent = Intent(this@MainActivity,SecondActivity::class.java)
-//                intent.putExtra("movieTitle","l")
+//                intent.putExtra("movieTitle","position")
 //                startActivity(intent)
 //        }
 
